@@ -1,0 +1,41 @@
+### POST
+POST http://localhost:3000/api/v1/products/count
+Content-Type: application/json
+
+{
+    "name": "hair dresser",
+    "image": "some_url",
+    "countInStock": 200
+}
+
+### GET
+GET http://localhost:3000/api/v1/products
+
+### POST category
+POST http://localhost:3000/api/v1/categories/
+Content-Type: application/json
+
+{
+    "name": "latop",
+    "icon": "laptop-icon",
+    "color": "#777"
+}
+
+### UPDATE category
+PUT http://localhost:3000/api/v1/categories/61c209f95ffa318b38a07dec
+Content-Type: application/json
+
+{
+    "name": "beauty",
+    "icon": "beauty-icon",
+    "color": "#878"
+}
+
+### GET Category
+GET http://localhost:3000/api/v1/categories
+
+### GET Category by ID
+GET http://localhost:3000/api/v1/categories/61c209f95ffa318b38a07dec
+
+### DELETE Category
+DELETE http://localhost:3000/api/v1/categories/
