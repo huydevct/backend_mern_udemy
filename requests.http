@@ -1,15 +1,55 @@
 ### POST
-POST http://localhost:3000/api/v1/products/count
+POST http://localhost:3000/api/v1/products/
 Content-Type: application/json
 
 {
-    "name": "hair dresser",
-    "image": "some_url",
-    "countInStock": 200
+    "name": "product 4",
+    "description": "this is product 4",
+    "richDescription": "product 4 rich description",
+    "image": "product 4 image",
+    "brand": "brand product 4",
+    "price": 30,
+    "category": "61c2101d15e73b1a9a228c47",
+    "countInStock": 26,
+    "rating": 14,
+    "numReviews": 22,
+    "isFeatured": false
+}
+
+### UPDATE product
+PUT http://localhost:3000/api/v1/products/61c1f5cc760f5364af2df2f4
+Content-Type: application/json
+
+{
+    "name": "product 2",
+    "description": "this is product 2",
+    "richDescription": "product 2 rich description",
+    "image": "product 2 image",
+    "brand": "brand product 2",
+    "price": 30,
+    "category": "61c2102c15e73b1a9a228c49",
+    "countInStock": 14,
+    "rating": 1,
+    "numReviews": 3,
+    "isFeatured": true
 }
 
 ### GET
+GET http://localhost:3000/api/v1/products?categories=61c2102c15e73b1a9a228c49
+
+### GET ALL
 GET http://localhost:3000/api/v1/products
+
+
+### COUNT product
+GET http://localhost:3000/api/v1/products/get/count
+
+### COUNT featured
+GET http://localhost:3000/api/v1/products/get/featured/2
+
+
+### GET by id
+GET http://localhost:3000/api/v1/products/61c5e58c12271a3f002c9f02
 
 ### POST category
 POST http://localhost:3000/api/v1/categories/
@@ -39,3 +79,6 @@ GET http://localhost:3000/api/v1/categories/61c209f95ffa318b38a07dec
 
 ### DELETE Category
 DELETE http://localhost:3000/api/v1/categories/
+
+### DELETE product
+DELETE http://localhost:3000/api/v1/products/61c1f610760f5364af2df2f6
