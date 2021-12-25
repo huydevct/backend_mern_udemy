@@ -16,6 +16,33 @@ Content-Type: application/json
     "isFeatured": false
 }
 
+### LOGIN
+POST http://localhost:3000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email": "huy3@huy.com",
+    "password": "1234"
+}
+
+
+### POST users
+POST http://localhost:3000/api/v1/users/register
+Content-Type: application/json
+
+{
+    "name": "huy5",
+    "email": "huy5@huy.com",
+    "password": "1234",
+    "phone": "12567890",
+    "isAdmin": true,
+    "apartment": "Apartment 0134",
+    "zip": "1021",
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "street": "Street 1011"
+}
+
 ### UPDATE product
 PUT http://localhost:3000/api/v1/products/61c1f5cc760f5364af2df2f4
 Content-Type: application/json
@@ -34,15 +61,29 @@ Content-Type: application/json
     "isFeatured": true
 }
 
+### GET all user
+GET http://localhost:3000/api/v1/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
+### GET user by ID
+GET http://localhost:3000/api/v1/users/61c68e2480d62b195bfe0f84
+
+
 ### GET
 GET http://localhost:3000/api/v1/products?categories=61c2102c15e73b1a9a228c49
 
-### GET ALL
+### GET ALL products
 GET http://localhost:3000/api/v1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpYXQiOjE2NDA0MjA2NTYsImV4cCI6MTY0MDUwNzA1Nn0.cd_LYVl-PGe3o-3TP5K98-ghF1Dx-5U6T-0qwgxwi9E
 
 
 ### COUNT product
 GET http://localhost:3000/api/v1/products/get/count
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpYXQiOjE2NDA0MjA2NTYsImV4cCI6MTY0MDUwNzA1Nn0.cd_LYVl-PGe3o-3TP5K98-ghF1Dx-5U6T-0qwgxwi9E
+
+### COUNT users
+GET http://localhost:3000/api/v1/users/get/count
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM3MTgsImV4cCI6MTY0MDUxMDExOH0.WCPyMrk0mEFdYrDKvKVQAfdprl5TONzuDFEFbbvZpOw
 
 ### COUNT featured
 GET http://localhost:3000/api/v1/products/get/featured/2
@@ -82,3 +123,7 @@ DELETE http://localhost:3000/api/v1/categories/
 
 ### DELETE product
 DELETE http://localhost:3000/api/v1/products/61c1f610760f5364af2df2f6
+
+### DELETE user by Id
+DELETE http://localhost:3000/api/v1/users/61c68c7dcf9ab7152254f36a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
