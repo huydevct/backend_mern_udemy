@@ -1,3 +1,61 @@
+### POST order
+POST http://localhost:3000/api/v1/orders/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
+{
+    "orderItems": [
+        {
+            "quantity": 3,
+            "product": "61c1f5cc760f5364af2df2f4"
+        },
+        {
+            "quantity": 2,
+            "product": "61c5e523c6a88bc6ae6e0cac"
+        }
+    ],
+    "shippingAddress1": "Hanoi 1",
+    "shippingAddress2": "1-B",
+    "city": "Danang",
+    "zip": "1232454545",
+    "country": "Vietnam",
+    "phone": "123441231231",
+    "user": "61c68cc2cf9ab7152254f36c"
+}
+
+### UPDATE order status with given ID
+PUT http://localhost:3000/api/v1/orders/61c6f6a5a8faf7258b9701de
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
+{
+    "status": "shipped"
+}
+
+### DELETE order with given ID
+DELETE http://localhost:3000/api/v1/orders/61c6f57522df5ad545f2a2f8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
+### GET all order
+GET http://localhost:3000/api/v1/orders/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
+### GET total sales
+GET http://localhost:3000/api/v1/orders/get/totalSales
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
+### COUNT orders
+GET http://localhost:3000/api/v1/orders/get/count
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
+### GET order by Id
+GET http://localhost:3000/api/v1/orders/61c7141387add8097155c745
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
+### GET user by user id given
+GET http://localhost:3000/api/v1/orders/get/userorders/61c68cc2cf9ab7152254f36c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWM2OGUyNDgwZDYyYjE5NWJmZTBmODQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDA0MjM0MjksImV4cCI6MTY0MDUwOTgyOX0.Dn6lLH46TACC5jVVX6vd3VL3Gfqiwph_R7XjopM_k68
+
 ### POST
 POST http://localhost:3000/api/v1/products/
 Content-Type: application/json

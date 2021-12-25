@@ -67,4 +67,4 @@ productSchema.set('toJSON', {
   virtuals: true,
 })
 
-exports.Product = mongoose.model("Products", productSchema);
+exports.Product = mongoose.model("Product", productSchema);
