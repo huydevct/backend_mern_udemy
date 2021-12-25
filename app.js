@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("tiny"));
 app.use(authJwt());
+app.use('/public/uploads', express.static(__dirname + '/public/uploads'))
 app.use(errorHandler);
 
 const api = process.env.API_URL;
